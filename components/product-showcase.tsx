@@ -1,25 +1,27 @@
 import { PhoneMockup } from "@/components/phone-mockup";
+import {
+  PhoneShowcaseCarousel,
+  type ShowcasePhone,
+} from "@/components/phone-showcase-carousel";
 
-const phones = [
+const phones: ShowcasePhone[] = [
   {
     src: "/showcase/aventir-feed.png",
     alt: "Aventir social feed",
-    wrapperClass: "relative hidden w-56 md:block",
-    glow: false,
+    label: "Social Feed",
     priority: false,
   },
   {
     src: "/showcase/aventir-track.png",
     alt: "Aventir live journey tracking",
-    wrapperClass: "relative z-10 w-64 sm:w-72",
+    label: "Live Tracking",
     glow: true,
     priority: true,
   },
   {
     src: "/showcase/aventir-explore.png",
     alt: "Aventir explore places",
-    wrapperClass: "relative hidden w-56 md:block",
-    glow: false,
+    label: "Discover",
     priority: false,
   },
 ];
@@ -32,20 +34,32 @@ export function ProductShowcase() {
           <div className="absolute -top-8 -left-8 h-32 w-32 rounded-2xl bg-accent/40 blur-2xl" />
           <div className="absolute -bottom-8 -right-8 h-32 w-32 rounded-2xl bg-secondary/40 blur-2xl" />
 
-          <div className="relative flex items-center justify-center gap-4 sm:gap-8">
-            {phones.map((phone) => (
-              <div key={phone.src} className={phone.wrapperClass}>
-                <PhoneMockup
-                  src={phone.src}
-                  alt={phone.alt}
-                  className="w-full"
-                  priority={phone.priority}
-                />
-                {phone.glow && (
-                  <div className="absolute -inset-4 -z-10 rounded-[3rem] bg-cta/20 blur-2xl" />
-                )}
-              </div>
-            ))}
+          <PhoneShowcaseCarousel phones={phones} />
+
+          <div className="relative hidden items-center justify-center gap-4 sm:gap-8 md:flex">
+            <div className="relative w-56">
+              <PhoneMockup
+                src={phones[0].src}
+                alt={phones[0].alt}
+                className="w-full"
+              />
+            </div>
+            <div className="relative z-10 w-64 lg:w-72">
+              <PhoneMockup
+                src={phones[1].src}
+                alt={phones[1].alt}
+                className="w-full"
+                priority
+              />
+              <div className="absolute -inset-4 -z-10 rounded-[3rem] bg-cta/20 blur-2xl" />
+            </div>
+            <div className="relative w-56">
+              <PhoneMockup
+                src={phones[2].src}
+                alt={phones[2].alt}
+                className="w-full"
+              />
+            </div>
           </div>
 
           <div className="mt-12 grid grid-cols-3 gap-4 sm:gap-8">
