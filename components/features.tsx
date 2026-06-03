@@ -5,7 +5,7 @@ const features = [
     icon: Route,
     title: "Automatic Journey Tracking",
     description:
-      "Hit start and go. Aventir maps your route in the background, detecting stops and visited places with minimal effort on your part.",
+      "Hit start and go. Aventir maps your route in the background, detecting stops in your trip automatically.",
     color: "bg-cta/20 text-cta",
   },
   {

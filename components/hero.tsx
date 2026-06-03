@@ -41,8 +41,7 @@ export function Hero() {
 
           <p className="mt-6 text-pretty text-lg leading-relaxed text-primary/70 sm:text-xl">
             Aventir is a social travel journal that maps your routes, captures
-            memories, and keeps you connected with friends' adventures. Track
-            effortlessly. Discover endlessly.
+            memories, and keeps you connected with friends' adventures.
           </p>
 
           <div className="mt-10">
