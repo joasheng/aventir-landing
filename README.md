@@ -1,5 +1,7 @@
 Note: This repository is only for configuring the early-access webpage. Below is an abridged explanation of Aventir from internal product documentation.
 
+URL: https://aventir.xyz
+
 # Aventir
 
 Aventir is a social travel journal for saving journeys, discovering new places, and keeping up with friends' travels.
