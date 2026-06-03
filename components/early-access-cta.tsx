@@ -22,7 +22,7 @@ export function EarlyAccessCTA() {
             <div className="mt-8">
               <WaitlistForm
                 variant="dark"
-                buttonLabel="Join Waitlist"
+                buttonLabel="Get Early Access"
                 successMessage="You're in. Check your inbox for next steps."
               />
             </div>
